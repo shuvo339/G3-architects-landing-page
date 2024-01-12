@@ -1,6 +1,7 @@
 *{
    font-family: 'Work Sans', sans-serif;
-
+    margin: 0;
+    padding: 0;
 }
 .btn{
     border-radius: 5px;
@@ -11,6 +12,14 @@
     font-weight: 600;
     cursor: pointer;
 }
+.text-gray{
+    color: #727272;
+}
+.section-title{
+    color:#131313;
+    font-size: 3rem                              ;
+    font-weight: 700;
+}
 /* header styles */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -20,12 +29,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 50px;
 }
-.nav-title{
-    color:#131313;
-    font-size: 3rem                              ;
-    font-weight: 700;
-}
+
 nav > ul {
     display: flex;
 }
@@ -51,10 +57,6 @@ nav li a{
     font-weight: 700;
     color:#131313;
 }
-.banner-description{
-    color: #727272;
-    font-weight: 400;
-}
 .banner img{
     margin-top: 20px;
     width: 100%;
@@ -63,7 +65,7 @@ nav li a{
 main{
     max-width: 1440px;
     width:75%;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 .teams-container{
     display: flex;
@@ -94,13 +96,28 @@ main{
     color: #FF900E;
     font-weight: 700;
 }
-.teams-description{
-    color: #727272;
-}
 
-   
-
-
+ .features{
+    margin-bottom: 150px;
+ } 
+ .facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+ } 
+ .facts-card-container{
+    display: flex;
+    justify-content: space-around;
+ }
+ .facts-card-container .card-stat{
+    font-size: 2.8rem;
+    color: #424242;
+ } 
+ .facts .facts-description{
+    padding: 20px 0px 70px;
+    max-width: 540px;
+ } 
 
 /* responsive styles */
 /* mobile device */
@@ -108,10 +125,16 @@ main{
     header{
         padding: 20px;
     }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
     }
-
+    main, .teams-text, .teams-images{
+        width: 100%;
+        padding: 20px;
+    }
+    .teams-images{
+        grid-template-columns: 1fr;
+    }
 }
 
 /* tablet devices */
@@ -121,6 +144,13 @@ main{
     }
     nav{
         flex-direction: column;
+    }
+    .teams-container{
+        flex-direction: column-reverse;
+    }
+    main, .teams-text, .teams-images{
+        width: 96%;
+    
     }
 
 }
